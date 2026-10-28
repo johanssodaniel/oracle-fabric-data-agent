@@ -1,6 +1,6 @@
 # Oracle Fabric Data Agent
 
-A small VS Code agent and command-line toolkit for exploring Oracle through SQLcl MCP and working with Microsoft Fabric.
+A VS Code agent and command-line toolkit for exploring Oracle through SQLcl MCP and working with Microsoft Fabric.
 
 ## Quick Start
 
@@ -20,23 +20,6 @@ For VS Code, reload the window after creating `.vscode/mcp.json`. The Fabric Cor
 ```bash
 MCP_BRIDGE_CONFIG=config/local-settings.json npm run doctor
 ```
-
-## Useful Commands
-
-```bash
-# Inspect Oracle and create a Fabric transfer plan
-MCP_BRIDGE_CONFIG=config/local-settings.json npm run online:plan
-
-# Upload an Oracle query or table to OneLake
-MCP_BRIDGE_CONFIG=config/local-settings.json npm run transfer -- --table YOUR_TABLE --name your_table
-
-# Upload a Fabric notebook definition
-MCP_BRIDGE_CONFIG=config/local-settings.json npm run notebook:upload
-```
-
-## Security
-
-Never commit `.env`, wallet files, local MCP configuration, access tokens, service-principal credentials, SQLcl downloads, or generated output. Use the supplied examples as templates.
 
 ## References
 
