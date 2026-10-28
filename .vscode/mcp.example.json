@@ -1,0 +1,19 @@
+{
+  "servers": {
+    "fabric": {
+      "type": "http",
+      "url": "https://api.fabric.microsoft.com/v1/mcp/core"
+    },
+    "oracle": {
+      "command": "<absolute-path-to-sqlcl-bin>/sql",
+      "args": [
+        "-mcp"
+      ],
+      "env": {
+        "JAVA_HOME": "<absolute-path-to-java-home>",
+        "TNS_ADMIN": "<absolute-path-to-extracted-adb-wallet>",
+        "ORACLE_SQLCL_CONNECTION_NAME": "<saved-sqlcl-connection-name>"
+      }
+    }
+  }
+}

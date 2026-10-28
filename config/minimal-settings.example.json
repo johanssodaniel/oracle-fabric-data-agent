@@ -1,0 +1,36 @@
+{
+  "servers": {
+    "fabric": {
+      "label": "Microsoft Fabric MCP",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@microsoft/fabric-mcp@latest",
+        "server",
+        "start",
+        "--mode",
+        "all"
+      ],
+      "autoApproveElicitation": true,
+      "env": {
+        "FABRIC_TENANT_ID": "${FABRIC_TENANT_ID}",
+        "FABRIC_TENANT_DOMAIN": "${FABRIC_TENANT_DOMAIN}",
+        "FABRIC_WORKSPACE_ID": "${FABRIC_WORKSPACE_ID}",
+        "FABRIC_FINANCIAL_CUSTOMERS_LAKEHOUSE_ID": "${FABRIC_FINANCIAL_CUSTOMERS_LAKEHOUSE_ID}"
+      }
+    },
+    "oracle": {
+      "label": "Oracle SQLcl MCP",
+      "command": "sql",
+      "args": [
+        "-mcp"
+      ],
+      "stderr": "ignore",
+      "env": {
+        "JAVA_HOME": "${JAVA_HOME}",
+        "TNS_ADMIN": "${TNS_ADMIN}",
+        "ORACLE_SQLCL_CONNECTION_NAME": "${ORACLE_SQLCL_CONNECTION_NAME}"
+      }
+    }
+  }
+}

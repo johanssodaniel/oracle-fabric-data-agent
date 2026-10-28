@@ -1,0 +1,15 @@
+node_modules/
+.env
+.env.*
+!.env.example
+config/local-settings.json
+.vscode/mcp.json
+wallets/
+wallets 2/
+downloads/
+tools/
+outputs/
+*.zip
+*.log
+dist/
+.DS_Store

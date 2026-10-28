@@ -1,0 +1,26 @@
+{
+  "name": "oracle-fabric-mcp-demo",
+  "version": "0.1.0",
+  "description": "Event-ready demo kit for Oracle SQLcl MCP and Microsoft Fabric MCP.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "showcase": "node ./src/showcase.js",
+    "demo:full": "node ./src/financial-demo-flow.js",
+    "transfer": "node ./src/transfer-oracle-to-fabric.js",
+    "online:plan": "node ./src/online-transfer-plan.js",
+    "fabric:enrich": "node ./src/fabric-enrich.js",
+    "fabric:ml": "node ./src/fabric-ml-notebook.js",
+    "notebook:upload": "node ./src/upload-notebook-definition.js",
+    "notebook:run": "node ./src/run-notebook.js",
+    "pipeline:upload": "node ./src/upload-pipeline-definition.js",
+    "doctor": "node ./src/doctor.js",
+    "check": "node --check ./src/config.js && node --check ./src/child-client.js && node --check ./src/showcase.js && node --check ./src/financial-demo-flow.js && node --check ./src/transfer-oracle-to-fabric.js && node --check ./src/online-transfer-plan.js && node --check ./src/fabric-enrich.js && node --check ./src/fabric-ml-notebook.js && node --check ./src/fabric-notebook-definition.js && node --check ./src/upload-notebook-definition.js && node --check ./src/run-notebook.js && node --check ./src/fabric-pipeline-definition.js && node --check ./src/upload-pipeline-definition.js && node --check ./src/doctor.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.13.0"
+  }
+}
