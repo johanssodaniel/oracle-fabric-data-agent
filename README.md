@@ -15,12 +15,6 @@ Configure the copied files with your own Fabric workspace, Oracle wallet, SQLcl 
 
 For VS Code, reload the window after creating `.vscode/mcp.json`. The Fabric Core server opens a Microsoft sign-in flow; Oracle uses your local SQLcl connection store.
 
-## Verify
-
-```bash
-MCP_BRIDGE_CONFIG=config/local-settings.json npm run doctor
-```
-
 ## References
 
 - [Oracle SQLcl MCP](https://docs.oracle.com/en/database/oracle/sql-developer-command-line/26.1/index.html)
